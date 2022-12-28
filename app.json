@@ -1,0 +1,9 @@
+{
+  "name": "Yupa",
+  "displayName": "Yupa",
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-9461667448707898~3092355205",
+    "ios_app_id": "ca-app-pub-9461667448707898~5275665416",
+    "delay_app_measurement_init": true
+  }
+}
