@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { WebView } from 'react-native-webview';
-import { BannerAd, BannerAdSize, InterstitialAd, AdEventType } from 'react-native-google-mobile-ads';
+import { BannerAd, BannerAdSize, InterstitialAd, AdEventType, TestIds } from 'react-native-google-mobile-ads';
 
 const adBannerUnitIdOS = Platform.select({
   ios: "ca-app-pub-9461667448707898/7388098524",
@@ -15,8 +15,8 @@ const adInterstitialUnitIdOS = Platform.select({
   android: "ca-app-pub-9461667448707898/6328515337",
 });
 
-const adBannerId = __DEV__ ? BANNER : adBannerUnitIdOS;
-const adInterstitialId = __DEV__ ? INTERSTITIAL : adInterstitialUnitIdOS;
+const adBannerId = __DEV__ ? TestIds.BANNER : adBannerUnitIdOS;
+const adInterstitialId = __DEV__ ? TestIds.INTERSTITIAL : adInterstitialUnitIdOS;
 const interstitial = InterstitialAd.createForAdRequest(adInterstitialId, {
   requestNonPersonalizedAdsOnly: false
 });
